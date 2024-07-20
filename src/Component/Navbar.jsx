@@ -21,10 +21,10 @@ function Navbar() {
         <div className="flex justify-between items-center text-white ml-20">
          
           <div className="flex space-x-32 ml-96 ">
-            <a href="#" className="text-xl font-medium font-mono hover:text-green-500">
+            <a href="http://localhost:5173/signin" className="text-xl font-medium font-mono hover:text-green-500">
               Log in
             </a>
-            <a href="#" className="text-xl font-medium font-mono hover:text-green-500">
+            <a href="http://localhost:5173/signup" className="text-xl font-medium font-mono hover:text-green-500">
               Sign up
             </a>
             <a href="#" className="text-xl font-medium font-mono hover:text-green-500">
