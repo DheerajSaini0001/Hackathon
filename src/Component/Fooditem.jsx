@@ -17,32 +17,32 @@ function Fooditem() {
     
       <section className="mt-16">
         <h2 className="text-3xl font-bold text-center mb-8">
-          Unleash Your Burger Cravings with Our Menu
+          Unleash Your Burger 
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="text-center">
             <img
-              src="https://placehold.co/150x150"
+              src="https://plus.unsplash.com/premium_photo-1664392112262-271039647be9?q=80&w=1950&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Classic Burger"
-              className="mx-auto mb-4 rounded-full"
+              className="mx-auto mb-4 rounded-full h-40 w-40"
             />
             <h3 className="text-xl font-semibold">Classic Burger</h3>
             <p className="text-lg">$10.99</p>
           </div>
-          <div className="text-center">
+          <div className="text-center ">
             <img
-              src="https://placehold.co/150x150"
+              src="https://images.unsplash.com/photo-1602833280958-1657662ccc58?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Bacon Burger"
-              className="mx-auto mb-4 rounded-full"
+              className="mx-auto mb-4 rounded-full  h-40 w-40 border-gray-900 border-4"
             />
-            <h3 className="text-xl font-semibold">Bacon Burger</h3>
+            <h3 className="text-xl font-semibold">Maggie</h3>
             <p className="text-lg">$12.99</p>
           </div>
           <div className="text-center">
             <img
-              src="https://placehold.co/150x150"
-              alt="Cheese Burger"
-              className="mx-auto mb-4 rounded-full"
+              src="https://static.toiimg.com/photo/104368492.cms"
+              alt="Tea"
+              className="mx-auto mb-4 rounded-full h-40 w-40 border-gray-900 border-4"
             />
             <h3 className="text-xl font-semibold">Cheese Burger</h3>
             <p className="text-lg">$11.99</p>
@@ -66,11 +66,11 @@ function Fooditem() {
           </a>
         </div>
       </section>
-      <section className="mt-16">
+      <section className="mt-2">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <img
-              src="https://placehold.co/500x300"
+              src="https://images.unsplash.com/photo-1559560329-e4b17eb5726b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Restaurant Interior"
               className="rounded-lg"
             />
