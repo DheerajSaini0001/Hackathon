@@ -51,7 +51,7 @@ function Navbar() {
     <div className="relative z-10 max-w-4xl p-8 text-white">
       <h1 className="text-6xl uppercase tracking-widest font-bold">Welcome ! {}</h1>
       <h1 className="mt-2 text-2xl font-bold">
-      Explore the art of the perfect burger on our Canteen! 
+      Explore the art of the perfect burger on Crave Corner! 
       </h1>
       <p className="mt-4 text-lg text-zinc-300">
       From patty perfection to bun brilliance, we uncover recipes, tips, and trends that elevate your burger game. Whether you're a gourmet griller or a burger aficionado, join us for mouthwatering insights and delicious discoveries. Let's celebrate the burger love!"
