@@ -13,73 +13,8 @@ function Fooditem() {
   />
   <div className="bg-[var(--background)] text-[var(--foreground)] p-4 overflow-x-hidden">
     <div className="container mx-auto">
-      <header className="flex justify-between items-center py-4">
-        <img
-          src="https://placehold.co/100x50?text=Logo"
-          alt="Restaurant Logo"
-          className="h-12"
-        />
-        <nav className="flex space-x-4">
-          <a
-            href="#"
-            className="text-[var(--foreground)] hover:text-[var(--primary)]"
-          >
-            Home
-          </a>
-          <a
-            href="#"
-            className="text-[var(--foreground)] hover:text-[var(--primary)]"
-          >
-            Menu
-          </a>
-          <a
-            href="#"
-            className="text-[var(--foreground)] hover:text-[var(--primary)]"
-          >
-            About
-          </a>
-          <a
-            href="#"
-            className="text-[var(--foreground)] hover:text-[var(--primary)]"
-          >
-            Contact
-          </a>
-        </nav>
-      </header>
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="relative bg-[var(--card)] p-8 rounded-lg">
-          <h1 className="text-4xl font-bold mb-4">
-            Unforgettable Burgers, Unforgettable Memories
-          </h1>
-          <p className="text-lg mb-6">
-            Experience the best burgers in town with our unique recipes and
-            fresh ingredients.
-          </p>
-          <a
-            href="#"
-            className="bg-[var(--primary)] text-[var(--primary-foreground)] px-4 py-2 rounded-lg"
-          >
-            Order Now
-          </a>
-          <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-yellow-500 rounded-full transform translate-x-1/2 translate-y-1/2" />
-        </div>
-        <div className="relative bg-[var(--card)] p-8 rounded-lg">
-          <h1 className="text-4xl font-bold mb-4">
-            Indulge in the Best Steaks in Town
-          </h1>
-          <p className="text-lg mb-6">
-            Savor the flavors of our juicy and tender steaks, cooked to
-            perfection.
-          </p>
-          <a
-            href="#"
-            className="bg-[var(--primary)] text-[var(--primary-foreground)] px-4 py-2 rounded-lg"
-          >
-            Order Now
-          </a>
-          <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-yellow-500 rounded-full transform translate-x-1/2 translate-y-1/2" />
-        </div>
-      </section>
+     
+    
       <section className="mt-16">
         <h2 className="text-3xl font-bold text-center mb-8">
           Unleash Your Burger Cravings with Our Menu
