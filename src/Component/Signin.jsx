@@ -1,4 +1,39 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+// import Navbar from "./Navbar";
+// import Fotter from "./Fotter";
+
 function Signin() {
+  const [formData, setFormData] = useState({});
+  const navigate = useNavigate();
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((previousData) => ({
+      ...previousData,
+      [name]: value,
+    }));
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // console.log(formData);
+    //api
+    const response = await fetch("http://localhost:8000/signin", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+    const jsonData = await response.json();
+    if(jsonData.data != null){
+      localStorage.setItem("user", JSON.stringify(jsonData.data));
+      navigate("/");
+      alert(jsonData.message);
+    }
+    else{
+      alert("Check credentials")
+    }
+  };
     return (
      
       <>
@@ -18,7 +53,9 @@ function Signin() {
       <div className="w-1/2 p-8">
         <h1 className="text-xl font-semibold mb-2">Welcome Back</h1>
         
-        <form>
+        <form 
+        onSubmit={handleSubmit}
+        >
           <div className="mb-4">
             <label className="block text-zinc-700 mb-2" htmlFor="email">
               Email Address
@@ -28,7 +65,11 @@ function Signin() {
                 className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 type="email"
                 id="email"
+                required=""
+                name="email"
                 placeholder="E-mail"
+                value={formData.email}
+                onChange={handleChange}
               />
               <span className="absolute inset-y-0 right-0 flex items-center pr-3 text-green-500">
                 <svg
@@ -56,13 +97,17 @@ function Signin() {
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
               type="password"
               id="password"
+              name="password"
+              required=""
               placeholder="********"
+              value={formData.password}
+              onChange={handleChange}
             />
           </div>
           <div className="flex items-center justify-between mb-6">
            
           </div>
-          <button className="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition duration-200">
+          <button className="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition duration-200" type="submit">
             Sign In
           </button>
         </form>
@@ -88,5 +133,5 @@ function Signin() {
     )
   }
   
-  export default Signin
+  export default Signin;
   

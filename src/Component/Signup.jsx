@@ -1,5 +1,35 @@
 
+import { useState } from "react";
+// import Navbar from "./Navbar";
+// import Fotter from "./Fotter";
+
 function Signup() {
+  let [formData, setFormData] = useState({});
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((previousData) => ({
+      ...previousData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    //api start
+    try {
+      const response = await fetch("http://localhost:8000/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      const jsonData = await response.json();
+      alert(jsonData.message);
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
      return (
       <>
     <meta charSet="UTF-8" />
@@ -43,35 +73,55 @@ function Signup() {
             To keep connected with us please sign up with your personal
             information by email addres,Name.....
           </p>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="mb-4">
               <input type="text" 
+                id="name"
+                name="name"
+                required=""
                 className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 aria-label="Type of Restaurant"
                 placeholder="What is your Name?"
+                value={formData.name}
+                onChange={handleChange}
               >
                 
               </input>
             </div>
             <div className="mb-4">
               <input
+                id="email"
+                name="email"
+                required=""
                 type="email"
                 placeholder="E-mail id"
                 className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                value={formData.email}
+                onChange={handleChange}
               />
             </div>
             <div className="mb-4">
               <input
-                type="Password"
+                id="password"
+                name="password"
+                required=""
+                type="password"
                 placeholder="Password"
                 className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                value={formData.password}
+                onChange={handleChange}
               />
             </div>
             <div className="mb-4">
               <input
+                id="confirmpassword"
+                name="confirmpassword"
+                required=""
                 type="password"
                 placeholder="Confirm Password"
                 className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                value={formData.confirmpassword}
+                onChange={handleChange}
               />
             </div>
             <button
@@ -107,5 +157,5 @@ function Signup() {
     )
   }
   
-  export default Signup
+  export default Signup;
   
