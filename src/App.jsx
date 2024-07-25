@@ -8,9 +8,10 @@ import Signup from './Component/Signup'
 import Signin from "./Component/Signin";
 import Navbar from "./Component/Navbar";
 import Additem from "./Component/Additem";
+import Cart from "./Component/Cart";
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
@@ -21,8 +22,8 @@ function App() {
           <Route path="/Signin" element={<Signin />} />
           <Route path="/Signup" element={<Signup />} />
           <Route path="/additem" element={<Additem/>} />
-          {/* <Route path="/Bookingupdate/:id" element={<BookingUpdate />} />
-          <Route path="/Bookingdata" element={<BookingData />} />
+          <Route path="/cart" element={<Cart />} />
+          {/* <Route path="/Bookingdata" element={<BookingData />} />
           <Route path="/card" element={<Card />} />
           <Route path="/navbar" element={<Navbar />} />
           <Route path="/slidebar" element={<Slidebar />} /> */}

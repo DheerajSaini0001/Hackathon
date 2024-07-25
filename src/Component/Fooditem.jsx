@@ -29,7 +29,7 @@ function Fooditem() {
     }}
   />
   <div className="bg-[var(--background)] text-[var(--foreground)] p-4 overflow-x-hidden">
-    <div className="container mx-auto border-4 border-red-600">
+    <div className="container mx-auto ">
  
        <div className="grid grid-cols-3 md:grid-cols-7 gap-8">
    

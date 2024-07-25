@@ -28,7 +28,7 @@ function Navbar() {
             <a href="http://localhost:5173/signup" className="text-xl font-medium font-mono hover:text-green-500">
               Sign up
             </a>
-            <a href="#" className="text-xl font-medium font-mono hover:text-green-500">
+            <a href="http://localhost:5173/cart" className="text-xl font-medium font-mono hover:text-green-500">
             Cart
             </a>
             <a href="http://localhost:5173/additem" className="text-xl font-medium font-mono hover:text-green-500">
