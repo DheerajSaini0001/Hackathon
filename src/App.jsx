@@ -9,6 +9,7 @@ import Signin from "./Component/Signin";
 import Navbar from "./Component/Navbar";
 import Additem from "./Component/Additem";
 import Cart from "./Component/Cart";
+import Team from "./Component/Team";
 
 function App() {
 
@@ -23,8 +24,8 @@ function App() {
           <Route path="/Signup" element={<Signup />} />
           <Route path="/additem" element={<Additem/>} />
           <Route path="/cart" element={<Cart />} />
-          {/* <Route path="/Bookingdata" element={<BookingData />} />
-          <Route path="/card" element={<Card />} />
+          <Route path="/ourteam" element={<Team />} />
+          {/* <Route path="/card" element={<Card />} />
           <Route path="/navbar" element={<Navbar />} />
           <Route path="/slidebar" element={<Slidebar />} /> */}
         </Routes>

@@ -9,7 +9,7 @@ function Closure() {
     {/* Item 1 */}
     <div className="hidden duration-700 ease-in-out" data-carousel-item="">
       <img
-        src=""
+        src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
         alt="..."
       />
@@ -25,7 +25,7 @@ function Closure() {
     {/* Item 3 */}
     <div className="hidden duration-700 ease-in-out" data-carousel-item="">
       <img
-        src="https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        src=""
         className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
         alt="..."
       />

@@ -19,9 +19,9 @@ function Navbar() {
   >
     <div className="bg-black bg-opacity-10 ">
       <div className="container mx-8 py-2 px-8 h-fu">
-        <div className="flex justify-between items-center text-white ml-20">
+        <div className="flex justify-between fixed w-full top-0 left-0 items-center  text-white  bg-black">
          
-          <div className="flex space-x-32 ml-96 ">
+          <div className="flex space-x-32 ml-96 mt-4 mb-8 ">
             <a href="http://localhost:5173/signin" className="text-xl font-medium font-mono hover:text-green-500">
            Sign In
             </a>
@@ -34,8 +34,12 @@ function Navbar() {
             <a href="http://localhost:5173/additem" className="text-xl font-medium font-mono hover:text-green-500">
             Add item
             </a>
+            <a href="http://localhost:5173/" className="text-xl font-medium font-mono hover:text-green-500">
+           Log Out
+            </a>
           </div>
         </div>
+        <br /><br />
         <div className="text-center text-white mt-10 ml-4 mr-4 mb-10">
         
   <meta charSet="UTF-8" />

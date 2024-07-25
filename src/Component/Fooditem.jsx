@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 function Fooditem() {
-
+let [foodItem,setFoodItem]=useState()
   let [foodDetailsData, setfoodDetailsData] = useState([]);
   const [userData, setUserData] = useState(
     JSON.parse(localStorage.getItem("user"))
@@ -16,6 +16,11 @@ function Fooditem() {
     };
     fetchData();
   },[]);
+  const handleFoodItem = (foodItem) => {
+    localStorage.setItem("foodItem", JSON.stringify(foodItem));
+    setFoodItem(foodItem);
+  }
+    // setFoodItem(foodItem);
      return (
       <>
      
@@ -31,50 +36,26 @@ function Fooditem() {
   <div className="bg-[var(--background)] text-[var(--foreground)] p-4 overflow-x-hidden">
     <div className="container mx-auto ">
  
-       <div className="grid grid-cols-3 md:grid-cols-7 gap-8">
+       <div className="grid grid-cols-3 md:grid-cols-4 gap-8 bg-black"
+       >
    
            {foodDetailsData.map((item, index)=>(  
-           <div className="text-center">
+           <div key={index} className="border-4 pb-4 pt-4 border-white rounded-xl text-center hover:flex-grow hover: bg-black " >
             <img
               src={`http://localhost:8000/image/${item.dishimage}`}
               alt="food"
-              className="mx-auto mb-4 rounded-full h-40 w-40  border-gray-900 border-4 "
+              className="mx-auto mb-4 rounded-full h-40 w-40  border-gray-100 border-4   transition-all duration-300 hover:scale-110"
             />
-            <h3 className="text-xl font-semibold">{item.dishname}</h3>
-            <p className="text-lg">₹{item.dishprice}</p>
-            <button className="shadow-4xl shadow-green-400 from-neutral-50 border-2 border-cyan-700 rounded-xl bg-slate-300 " ><div className="mx-4">Buy</div> </button>
+            <h3 className="text-xl text-white font-semibold">{item.dishname}</h3>
+            <p className="text-lg  text-white">₹{item.dishprice}</p>
+            <button onClick={()=>handleFoodItem(item.dishname)}  className="hover:bg-sky-500 shadow-4xl shadow-green-400 from-neutral-50 border-2 border-cyan-700 rounded-xl bg-slate-300 " ><div className="mx-4">Add to Cart</div> </button>
             </div>
         
           ))}
          
  </div>
-        <div className="text-center mt-8">
-        </div>
+       
       
-      <section className="mt-2">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <img
-              src=""
-              alt="Restaurant Interior"
-              className="rounded-lg"
-            />
-          </div>
-         
-        </div>
-         <div className="flex flex-col justify-center">
-            <h2 className="text-3xl font-bold mb-4">
-              Delicious Burgers Made from the Freshest Ingredients
-            </h2>
-            <p className="text-lg mb-6">
-              Since 1995, we have been serving the best burgers and steaks in
-              town. Our commitment to quality and taste is unmatched.
-            </p>
-            <p className="text-lg">
-              Join us for a meal and experience the difference.
-            </p>
-          </div>
-      </section>
     </div>
   </div>
 
