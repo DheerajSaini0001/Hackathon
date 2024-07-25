@@ -1,3 +1,4 @@
+import Additem from "./Additem"
 function Navbar() {
      return (
       < >
@@ -29,6 +30,9 @@ function Navbar() {
             </a>
             <a href="#" className="text-xl font-medium font-mono hover:text-green-500">
             Cart
+            </a>
+            <a href="http://localhost:5173/additem" className="text-xl font-medium font-mono hover:text-green-500">
+            Add item
             </a>
           </div>
         </div>

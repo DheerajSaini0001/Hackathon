@@ -6,6 +6,8 @@ import './App.css'
 import Home from './Component/Home'
 import Signup from './Component/Signup'
 import Signin from "./Component/Signin";
+import Navbar from "./Component/Navbar";
+import Additem from "./Component/Additem";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,8 +20,8 @@ function App() {
 
           <Route path="/Signin" element={<Signin />} />
           <Route path="/Signup" element={<Signup />} />
-          {/* <Route path="/bookingform" element={<BookingForm />} />
-          <Route path="/Bookingupdate/:id" element={<BookingUpdate />} />
+          <Route path="/additem" element={<Additem/>} />
+          {/* <Route path="/Bookingupdate/:id" element={<BookingUpdate />} />
           <Route path="/Bookingdata" element={<BookingData />} />
           <Route path="/card" element={<Card />} />
           <Route path="/navbar" element={<Navbar />} />
